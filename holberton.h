@@ -6,6 +6,14 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+typedef struct intype
+{
+
+	char *s;
+	void (*pt)();
+
+} functions;
+
 int _printf(const char *format, ...);
 
 #endif /* HOLBERTON_H */
