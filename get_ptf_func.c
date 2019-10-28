@@ -24,6 +24,9 @@ int (*get_ptf_func(const char *s, int pos))(va_list)
 		char character = s[pos + 1];
 		char *pChar =  malloc(2);
 
+		if (pChar == NULL)
+			return (NULL);
+
 		*(pChar) = character;
 		*(pChar + 1) = '\0';
 
