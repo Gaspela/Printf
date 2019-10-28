@@ -8,22 +8,27 @@
 int _printf_numbers(va_list arguments)
 {
 	int number = va_arg(arguments, int), cnt = 0;
+	unsigned int number_max;
 
 	if (number < 0)
 	{
-		number = number * (-1);
+		number_max = (-1) * number;
 		_putchar('-');
 		cnt++;
 	}
-
-	if (number < 10)
+	else
 	{
-		_putchar('0' + number);
+		number_max = number;
+	}
+
+	if (number_max > 0 && number_max < 10)
+	{
+		_putchar('0' + number_max);
 		cnt++;
 		return (cnt);
 	}
 
-	cnt = _printf_numbers_recursion(number);
+	cnt = _printf_numbers_recursion(number_max);
 
 	return (cnt);
 }
@@ -33,11 +38,11 @@ int _printf_numbers(va_list arguments)
  *
  * Return: cnt.
 */
-int _printf_numbers_recursion(int number)
+int _printf_numbers_recursion(unsigned int number)
 {
-	int new_number = number / 10;
-	int prt_number = number % 10;
-	int cnt = 0;
+	unsigned int new_number = number / 10;
+	unsigned int prt_number = number % 10;
+	unsigned int cnt = 0;
 
 	if (new_number != 0)
 	{

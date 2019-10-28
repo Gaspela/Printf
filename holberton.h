@@ -32,7 +32,7 @@ int _printf_numbers(va_list arguments);
 int _printf_binary(va_list arguments);
 
 int lengthArray(char *array);
-int _printf_numbers_recursion(int number);
+int _printf_numbers_recursion(unsigned int number);
 int _printf_binary_recursion(unsigned int number);
 int _putchar(char c);
 
