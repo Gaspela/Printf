@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ * _printf_binary - Function assigment args list.
+ * @arguments: Value arguments list.
+ *
+ * Return: cnt.
+*/
 int _printf_binary(va_list arguments)
 {
 	unsigned int number = va_arg(arguments, unsigned int);
@@ -17,7 +22,12 @@ int _printf_binary(va_list arguments)
 
 	return (cnt);
 }
-
+/**
+ * _printf_binary_recursion - Functions value binary.
+ * @number: Argumment value number.
+ *
+ * Return: cnt.
+*/
 int _printf_binary_recursion(unsigned int number)
 {
 	unsigned int div = 1, mod;

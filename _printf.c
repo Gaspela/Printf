@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ * _printf - Function print and call funtion.
+ * @format: Arguments list.
+ *
+ * Return: -1, Other retunr line print.
+*/
 int _printf(const char *format, ...)
 {
 	int cntFrt = 0, linesCnt = 0;

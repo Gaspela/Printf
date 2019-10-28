@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ * _printf_string - Function print string.
+ * @arguments: Args functions.
+ *
+ * Return: i
+*/
 int _printf_string(va_list arguments)
 {
 	char *char_to_print = va_arg(arguments, char*);

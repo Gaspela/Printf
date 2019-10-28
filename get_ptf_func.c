@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * get_ptf_func - grt the specific function to print
- * @s: operator
- *
- * Return: pointer function
+ * get_ptf_func - Grt the specific function to print.
+ * @s: Operator.
+ * @pos: Value intargs
+ * Return: pointer function.
  */
 int (*get_ptf_func(const char *s, int pos))(va_list)
 {

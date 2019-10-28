@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ * _printf_numbers - Function valid number dex to int.
+ * @arguments: Value arg to list.
+ *
+ * Return: cnt.
+*/
 int _printf_numbers(va_list arguments)
 {
 	int number = va_arg(arguments, int), cnt = 0;
@@ -22,7 +27,12 @@ int _printf_numbers(va_list arguments)
 
 	return (cnt);
 }
-
+/**
+ * _printf_numbers_recursion - Funtion value number.
+ * @number: Value int.
+ *
+ * Return: cnt.
+*/
 int _printf_numbers_recursion(int number)
 {
 	int new_number = number / 10;
