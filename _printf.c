@@ -22,7 +22,13 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + cntFrt) == '%')
 		{
-			if (get_ptf_func(format, cntFrt) != NULL)
+			if (*(format + (cntFrt + 1)) == '%')
+			{
+				_putchar('%');
+				cntFrt++;
+				linesCnt++;
+			}
+			else if (get_ptf_func(format, cntFrt) != NULL)
 			{
 				linesCnt += (get_ptf_func(format, cntFrt))(arguments);
 				cntFrt++;
