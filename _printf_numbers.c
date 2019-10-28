@@ -28,7 +28,7 @@ int _printf_numbers(va_list arguments)
 		return (cnt);
 	}
 
-	cnt = _printf_numbers_recursion(number_max);
+	cnt += _printf_numbers_recursion(number_max);
 
 	return (cnt);
 }
