@@ -21,6 +21,12 @@ int _printf_numbers(va_list arguments)
 		number_max = number;
 	}
 
+	if (number_max == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
 	if (number_max > 0 && number_max < 10)
 	{
 		_putchar('0' + number_max);
@@ -28,7 +34,8 @@ int _printf_numbers(va_list arguments)
 		return (cnt);
 	}
 
-	cnt += _printf_numbers_recursion(number_max);
+	_printf_numbers_recursion(number_max);
+	cnt += _counter_number(number_max);
 
 	return (cnt);
 }
@@ -54,6 +61,31 @@ int _printf_numbers_recursion(unsigned int number)
 	{
 		cnt++;
 		_putchar('0' + number);
+	}
+
+	return (cnt);
+}
+/**
+ * _counter_number - counter number digits
+ * @number: Value int
+ *
+ * Return: cnt.
+ */
+
+
+int _counter_number(unsigned int number)
+{
+	int cnt = 0;
+
+	if (number == 0)
+	{
+		return (1);
+	}
+
+	while (number != 0)
+	{
+		number /= 10;
+		cnt++;
 	}
 
 	return (cnt);

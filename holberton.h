@@ -35,5 +35,6 @@ int lengthArray(char *array);
 int _printf_numbers_recursion(unsigned int number);
 int _printf_binary_recursion(unsigned int number);
 int _putchar(char c);
+int _counter_number(unsigned int number);
 
 #endif /* HOLBERTON_H */
