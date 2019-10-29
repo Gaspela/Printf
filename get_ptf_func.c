@@ -14,6 +14,10 @@ int (*get_ptf_func(const char *s, int pos))(va_list)
 		{"d", _printf_numbers},
 		{"i", _printf_numbers},
 		{"b", _printf_binary},
+		{"u", _printf_unsigned_int},
+		{"o", _printf_octal},
+		{"x", _printf_hexadecimalh},
+		{"X", _printf_hexadecimalH},
 		{NULL, NULL}
 	};
 
