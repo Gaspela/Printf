@@ -19,6 +19,259 @@ Item b - int _strcmp(char *s1, char *s2);
 
 Item c - char *_strcat(char *dest, char *src);
 
+
+s Darwin
+.Sh NAME               
+.Nm 0x11. C - printf:
+.Nm Secrets of printf: 
+This paper explains how printf works, and
+how to design the proper formatting specification for
+any occasion.
+
+.Sh SYNOPSIS            
+.Nm Header:
+
+
+item a - int _printf(const char *format, ...);
+
+Item b - int _strcmp(char *s1, char *s2);
+
+Item c - char *_strcat(char *dest, char *src);
+
+Item d - int (*get_ptf_func(const char *s, int pos))(va_list);
+
+Item e - int _printf_char(va_list arguments);
+
+Item f - int _printf_string(va_list arguments);
+
+Item g - _printf_numbers(va_list arguments);
+
+Item h - int _printf_binary(va_list arguments);
+
+Item i - int lengthArray(char *array);
+
+Item j - _printf_numbers_recursion(unsigned int number);
+
+Item k - int _printf_binary_recursion(unsigned int number);
+
+Item l - int _putchar(char c);
+
+Item m - int _counter_number(unsigned int number);
+
+.Sh DESCRIPTION          \" Section Header - required - don't modify
+_printf.c Produces output according to a format as described below.  
+Output is _Putchar to stdout, the standard output stream.
+.Nm
+
+
+.Nm Macro this:
+
+#ifndef HOLBERTON_H
+
+#define HOLBERTON_H
+
+Header.
+
+#endif /* HOLBERTON_H */
+
+
+.Pp                      \" Inserts a space
+A list of items with descriptions:
+.Bl -tag -width -indent  
+.It item a             
+ _printf - Function print and call funtion.
+ @format: Arguments list.
+ Return: -1, Other retunr line print.
+
+.It item b
+ _strcmp - compares two strings.
+ @s1: array
+ @s2: array
+ Return: int
+ 
+.It item c
+Pending
+
+.It item e
+_printf_char - Function print values type char.
+@arguments: In arguments list.
+Return: 1.
+
+.It item f              
+_printf_string - Function print string.
+@arguments: Args functions.
+Return: i
+
+.It item g
+_printf_numbers - Function valid number dex to int.
+@arguments: Value arg to list.
+Return: cnt.
+
+.It item h             
+_printf_binary - Function assigment args list.
+@arguments: Value arguments list.
+Return: cnt.
+
+.It item i
+Pending
+
+.It item j            
+_printf_numbers_recursion - Funtion value number.
+@number: Value int.
+Return: cnt.
+
+.It item k
+_printf_binary_recursion - Functions value binary.
+@number: Argumment value number.
+Return: cnt.
+
+.It item l               
+_putchar - writes the character c to stdout
+@c: The character to print
+Return: On success 1. On error, -1 is returned, and errno is set appropriately.
+
+.It item m             
+counter_number - counter number digits
+@number: Value int
+Return: cnt.
+
+.El                      \" Ends the list
+.Pp
+A list of flags and their descriptions:
+.Bl -tag -width -indent 
+.It Fl %c          
+Prints a character into the INPUT .
+.It Fl %s
+Prints a String into the INPUT .
+.It Fl %i
+Prints a integer into the INPUT .
+.It Fl %d
+Prints a double into the INPUT .
+.It Fl %u          
+Prints a unsigned into the INPUT .
+
+.Pp
+.Sh FILES                \" File used or created by the topic of the man page
+
+**************************************************************************
+.It Pa ./_printf.c
+.BI FILE_1 This file contains all the information necessary to make the call to each function.
+
+**************************************************************************
+.It Pa ./_printf_binary.c
+FILE_2 This file contains all the information necessary to solve issue number 3 ... it is necessary to convert an integer to a binary number.
+
+**************************************************************************
+.It Pa ./_printf_char.c
+FILE_3 This file contains all the information necessary for how to return character printing.
+**************************************************************************
+.It Pa ./_printf_numbers.c
+FILE_4 This file contains all the information necessary for how to return the integers, total characters and module result.
+**************************************************************************
+.It Pa ./_printf_string.c
+FILE_5 This file contains all the necessary information on how to return the string texts.
+**************************************************************************
+.It Pa ./_putchar.c
+FILE_6 This file contains all the information necessary to print all output characters.
+**************************************************************************
+.It Pa ./strcmp.c
+FILE_7 This file contains all the information needed to compare two text strings and revert if they are the same or not.
+**************************************************************************
+.It Pa ./get_ptf_func.c
+FILE_8 This file contains all the information necessary to call one function or another depending on the value returned
+**************************************************************************
+.It Pa ./holberton.h
+FILE_9 This file has declared all the necessary functions and libraries for the correct operation of the program
+**************************************************************************
+
+.Sh SIMPLE TEST CASES
+
+len = _printf("abcd.\n");
+
+len2 = printf("abcd.\n");
+
+**************************************************************************
+ui = (unsigned int)INT_MAX + 1024;
+
+addr = (void *)0x7ffe637541f0;
+
+**************************************************************************
+_printf("Length:[%d, %i]\n", len, len);
+
+printf("Length:[%d, %i]\n", len2, len2);
+
+**************************************************************************
+_printf("Negative:[%d]\n", -762534);
+
+printf("Negative:[%d]\n", -762534);
+
+**************************************************************************
+_printf("Unsigned:[%u]\n", ui);
+
+printf("Unsigned:[%u]\n", ui);
+
+**************************************************************************
+_printf("Unsigned octal:[%o]\n", ui);
+
+printf("Unsigned octal:[%o]\n", ui);
+
+**************************************************************************
+_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+
+printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+
+**************************************************************************
+_printf("Character:[%c]\n", 'H');
+
+printf("Character:[%c]\n", 'H');
+
+**************************************************************************
+\_printf("String:[%s]\n", "I am a string !");
+
+printf("String:[%s]\n", "I am a string !");
+
+**************************************************************************
+_printf("Address:[%p]\n", addr);
+
+printf("Address:[%p]\n", addr);
+
+**************************************************************************
+len = _printf("Percent:[%%]\n");
+
+len2 = printf("Percent:[%%]\n");
+
+**************************************************************************
+_printf("Len:[%d]\n", len);
+    
+printf("Len:[%d]\n", len2);
+
+*************************************************************************
+return (0);
+
+
+.Sh AUTHOR
+Samir millan orozco and Felipe zatizabal (Samirmillanorozco@hotmail.com - william-felipe.satizabal-vallejo@holbertonschool.com)
+.
+.Dd 28/10/19
+.Dt Printf_proyect 
+.Os Darwin
+.Sh NAME               
+.Nm 0x11. C - printf:
+.Nm Secrets of printf: 
+This paper explains how printf works, and
+how to design the proper formatting specification for
+any occasion.
+
+.Sh SYNOPSIS            
+.Nm Header:
+
+
+item a - int _printf(const char *format, ...);
+
+Item b - int _strcmp(char *s1, char *s2);
+
+Item c - char *_strcat(char *dest, char *src);
+
 Item d - int (*get_ptf_func(const char *s, int pos))(va_list);
 
 Item e - int _printf_char(va_list arguments);
@@ -168,3 +421,153 @@ FILE_9 This file has declared all the necessary functions and libraries for the 
 
 .Sh AUTHOR
 Samir millan orozco and Felipezatizabal (Samirmillanorozco@hotmail.com - william-felipe.satizabal-vallejo@holbertonschool.com)
+Item d - int (*get_ptf_func(const char *s, int pos))(va_list);
+
+Item e - int _printf_char(va_list arguments);
+
+Item f - int _printf_string(va_list arguments);
+
+Item g - _printf_numbers(va_list arguments);
+
+Item h - int _printf_binary(va_list arguments);
+
+Item i - int lengthArray(char *array);
+
+Item j - _printf_numbers_recursion(unsigned int number);
+
+Item k - int _printf_binary_recursion(unsigned int number);
+
+Item l - int _putchar(char c);
+
+Item m - int _counter_number(unsigned int number);
+
+.Sh DESCRIPTION          \" Section Header - required - don't modify
+_printf.c Produces output according to a format as described below.  
+Output is _Putchar to stdout, the standard output stream.
+.Nm
+
+
+.Nm Macro this:
+
+#ifndef HOLBERTON_H
+
+#define HOLBERTON_H
+
+Header.
+
+#endif /* HOLBERTON_H */
+
+
+.Pp                      \" Inserts a space
+A list of items with descriptions:
+.Bl -tag -width -indent  
+.It item a             
+ _printf - Function print and call funtion.
+ @format: Arguments list.
+ Return: -1, Other retunr line print.
+
+.It item b
+ _strcmp - compares two strings.
+ @s1: array
+ @s2: array
+ Return: int
+ 
+.It item c
+Pending
+
+.It item e
+_printf_char - Function print values type char.
+@arguments: In arguments list.
+Return: 1.
+
+.It item f              
+_printf_string - Function print string.
+@arguments: Args functions.
+Return: i
+
+.It item g
+_printf_numbers - Function valid number dex to int.
+@arguments: Value arg to list.
+Return: cnt.
+
+.It item h             
+_printf_binary - Function assigment args list.
+@arguments: Value arguments list.
+Return: cnt.
+
+.It item i
+Pending
+
+.It item j            
+_printf_numbers_recursion - Funtion value number.
+@number: Value int.
+Return: cnt.
+
+.It item k
+_printf_binary_recursion - Functions value binary.
+@number: Argumment value number.
+Return: cnt.
+
+.It item l               
+_putchar - writes the character c to stdout
+@c: The character to print
+Return: On success 1. On error, -1 is returned, and errno is set appropriately.
+
+.It item m             
+counter_number - counter number digits
+@number: Value int
+Return: cnt.
+
+.El                      \" Ends the list
+.Pp
+A list of flags and their descriptions:
+.Bl -tag -width -indent 
+.It Fl %c          
+Prints a character into the INPUT .
+.It Fl %s
+Prints a String into the INPUT .
+.It Fl %i
+Prints a integer into the INPUT .
+.It Fl %d
+Prints a double into the INPUT .
+.It Fl %u          
+Prints a unsigned into the INPUT .
+
+.Pp
+.Sh FILES                \" File used or created by the topic of the man page
+
+**************************************************************************
+.It Pa ./_printf.c
+.BI FILE_1 This file contains all the information necessary to make the call to each function.
+
+**************************************************************************
+.It Pa ./_printf_binary.c
+FILE_2 This file contains all the information necessary to solve issue number 3 ... it is necessary to convert an integer to a binary number.
+
+**************************************************************************
+.It Pa ./_printf_char.c
+FILE_3 This file contains all the information necessary for how to return character printing.
+**************************************************************************
+.It Pa ./_printf_numbers.c
+FILE_4 This file contains all the information necessary for how to return the integers, total characters and module result.
+**************************************************************************
+.It Pa ./_printf_string.c
+FILE_5 This file contains all the necessary information on how to return the string texts.
+**************************************************************************
+.It Pa ./_putchar.c
+FILE_6 This file contains all the information necessary to print all output characters.
+**************************************************************************
+.It Pa ./strcmp.c
+FILE_7 This file contains all the information needed to compare two text strings and revert if they are the same or not.
+**************************************************************************
+.It Pa ./get_ptf_func.c
+FILE_8 This file contains all the information necessary to call one function or another depending on the value returned
+**************************************************************************
+.It Pa ./holberton.h
+FILE_9 This file has declared all the necessary functions and libraries for the correct operation of the program
+**************************************************************************
+
+
+.Sh AUTHOR
+Samir millan orozco and Felipezatizabal (Samirmillanorozco@hotmail.com - william-felipe.satizabal-vallejo@holbertonschool.com)
+
