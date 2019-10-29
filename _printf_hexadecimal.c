@@ -7,9 +7,25 @@
  */
 int _printf_hexadecimalh(va_list arguments)
 {
-	char hexa[15] =	{'1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+	char hexa[15];
 	unsigned int number = va_arg(arguments, unsigned int);
 	int cnt = 0;
+
+	hexa[0] = '1';
+	hexa[1] = '2';
+	hexa[2] = '3';
+	hexa[3] = '4';
+	hexa[4] = '5';
+	hexa[5] = '6';
+	hexa[6] = '7';
+	hexa[7] = '8';
+	hexa[8] = '9';
+	hexa[9] = 'a';
+	hexa[10] = 'b';
+	hexa[11] = 'c';
+	hexa[12] = 'd';
+	hexa[13] =  'e';
+	hexa[14] = 'f';
 
 	if (number < 10)
 	{
@@ -37,9 +53,25 @@ int _printf_hexadecimalh(va_list arguments)
  */
 int _printf_hexadecimalH(va_list arguments)
 {
-	char hexa[15] = {'1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+	char hexa[15];
 	unsigned int number = va_arg(arguments, unsigned int);
 	int cnt = 0;
+
+	hexa[0] = '1';
+	hexa[1] = '2';
+	hexa[2] = '3';
+	hexa[3] = '4';
+	hexa[4] = '5';
+	hexa[5] = '6';
+	hexa[6] = '7';
+	hexa[7] = '8';
+	hexa[8] = '9';
+	hexa[9] = 'a';
+	hexa[10] = 'b';
+	hexa[11] = 'c';
+	hexa[12] = 'd';
+	hexa[13] =  'e';
+	hexa[14] = 'f';
 
 	if (number < 10)
 	{
