@@ -66,12 +66,12 @@ int _printf_hexadecimalH(va_list arguments)
 	hexa[6] = '7';
 	hexa[7] = '8';
 	hexa[8] = '9';
-	hexa[9] = 'a';
-	hexa[10] = 'b';
-	hexa[11] = 'c';
-	hexa[12] = 'd';
-	hexa[13] =  'e';
-	hexa[14] = 'f';
+	hexa[9] = 'A';
+	hexa[10] = 'B';
+	hexa[11] = 'C';
+	hexa[12] = 'D';
+	hexa[13] =  'E';
+	hexa[14] = 'F';
 
 	if (number < 10)
 	{
