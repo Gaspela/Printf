@@ -26,6 +26,24 @@ printf("Value %d.\n", cont);
 * All your header files should be include guarded
 * Note that we will not provide the _putchar function for this project
 
+## Prototype
+
+```bash
+int _printf(const char *format, ...);
+```
+
+## Compilation
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c
+```
+
+## Usage _printf
+
+```bash
+int _printf(const char *format, ...);
+```
+
 ## Material
 
  - [Secrets of printf](https://www.cypress.com/file/54761/download)
